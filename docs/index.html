@@ -36,7 +36,6 @@
   a{color:var(--teal-deep);}
   a:hover{color:var(--gold);}
 
-  /* Header / hero */
   header.hero{
     border-bottom:1px solid var(--rule);
     padding:64px 0 40px;
@@ -55,7 +54,13 @@
     gap:10px;
     margin-bottom:22px;
   }
-  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block;}
+  .eyebrow .dot{
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--gold);
+    display:inline-block;
+  }
   h1{
     font-family:'Source Serif 4',Georgia,serif;
     font-weight:700;
@@ -71,7 +76,9 @@
     margin:0 0 28px;
   }
   .meta-row{
-    display:flex;flex-wrap:wrap;gap:10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
     font-family:'IBM Plex Mono',monospace;
     font-size:13px;
   }
@@ -83,9 +90,10 @@
     border-radius:3px;
   }
 
-  /* Nav strip */
   nav.toc{
-    position:sticky; top:0; z-index:5;
+    position:sticky;
+    top:0;
+    z-index:5;
     background:rgba(246,244,238,0.92);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--rule);
@@ -93,7 +101,9 @@
     font-size:12px;
   }
   nav.toc .wrap{
-    display:flex; gap:2px; overflow-x:auto;
+    display:flex;
+    gap:2px;
+    overflow-x:auto;
     padding:10px 24px;
     scrollbar-width:none;
   }
@@ -105,10 +115,16 @@
     padding:5px 10px;
     border-radius:3px;
   }
-  nav.toc a:hover{background:var(--tag-bg);color:var(--teal-deep);}
+  nav.toc a:hover{
+    background:var(--tag-bg);
+    color:var(--teal-deep);
+  }
 
   main{padding:8px 0 40px;}
-  section{padding:44px 0; border-bottom:1px solid var(--rule);}
+  section{
+    padding:44px 0;
+    border-bottom:1px solid var(--rule);
+  }
   section:last-of-type{border-bottom:none;}
 
   .sec-label{
@@ -133,9 +149,18 @@
     margin:26px 0 10px;
     color:var(--ink);
   }
-  p{margin:0 0 16px; color:var(--ink);}
-  .lede{font-size:18px; color:var(--ink-soft);}
-  ul,ol{margin:0 0 16px; padding-left:22px;}
+  p{
+    margin:0 0 16px;
+    color:var(--ink);
+  }
+  .lede{
+    font-size:18px;
+    color:var(--ink-soft);
+  }
+  ul,ol{
+    margin:0 0 16px;
+    padding-left:22px;
+  }
   li{margin-bottom:6px;}
 
   .abstract{
@@ -186,11 +211,20 @@
     font-weight:500;
     border-bottom:1px solid var(--ink);
   }
-  td.num, th.num{text-align:right; font-family:'IBM Plex Mono',monospace;}
-  tr.grouped td{color:var(--teal-deep); font-weight:500;}
+  td.num,
+  th.num{
+    text-align:right;
+    font-family:'IBM Plex Mono',monospace;
+  }
+  tr.grouped td{
+    color:var(--teal-deep);
+    font-weight:500;
+  }
 
   .metric-shift{
-    display:flex; align-items:center; gap:14px;
+    display:flex;
+    align-items:center;
+    gap:14px;
     font-family:'IBM Plex Mono',monospace;
     background:var(--paper-raised);
     border:1px solid var(--rule);
@@ -199,42 +233,61 @@
     margin:18px 0 22px;
     flex-wrap:wrap;
   }
-  .metric-shift .m{font-size:14px; color:var(--ink-soft);}
-  .metric-shift .m b{font-size:20px; color:var(--teal-deep); display:block;}
-  .metric-shift .arrow{color:var(--gold); font-size:20px;}
-
-  /* Feature bars (stand-in for the chart) */
-  .featlist{list-style:none; margin:20px 0; padding:0;}
-  .featlist li{margin-bottom:14px;}
-  .featlist .flabel{
-    display:flex; justify-content:space-between;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:13px; margin-bottom:5px; color:var(--ink-soft);
-  }
-  .featlist .track{
-    height:8px; background:var(--tag-bg); border-radius:2px; overflow:hidden;
-  }
-  .featlist .fill{height:100%; background:linear-gradient(90deg,var(--teal),var(--gold)); border-radius:2px;}
-
-  .chart-slot{
-    border:1px dashed var(--rule);
-    background:var(--paper-raised);
-    padding:24px; border-radius:3px;
-    text-align:center;
+  .metric-shift .m{
+    font-size:14px;
     color:var(--ink-soft);
-    font-family:'IBM Plex Mono',monospace;
-    font-size:13px;
-    margin:18px 0 22px;
+  }
+  .metric-shift .m b{
+    font-size:20px;
+    color:var(--teal-deep);
+    display:block;
+  }
+  .metric-shift .arrow{
+    color:var(--gold);
+    font-size:20px;
   }
 
-  .limits-list{list-style:none; margin:0; padding:0;}
+  /* Actual feature-importance chart */
+  .feature-chart{
+    margin:24px 0 22px;
+    background:var(--paper-raised);
+    border:1px solid var(--rule);
+    padding:18px;
+    border-radius:3px;
+  }
+
+  .feature-chart img{
+    display:block;
+    width:100%;
+    height:auto;
+    max-width:100%;
+    margin:0 auto;
+  }
+
+  .chart-caption{
+    margin-top:12px;
+    margin-bottom:0;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    line-height:1.5;
+    color:var(--ink-soft);
+  }
+
+  .limits-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
   .limits-list li{
-    padding:14px 0; border-top:1px solid var(--rule);
+    padding:14px 0;
+    border-top:1px solid var(--rule);
   }
   .limits-list li:first-child{border-top:none;}
   .limits-list .lnum{
     font-family:'IBM Plex Mono',monospace;
-    color:var(--gold); font-size:13px; margin-right:8px;
+    color:var(--gold);
+    font-size:13px;
+    margin-right:8px;
   }
 
   footer{
@@ -242,22 +295,41 @@
     font-size:13.5px;
     color:var(--ink-soft);
   }
-  footer .wrap{border-top:1px solid var(--rule); padding-top:24px;}
+  footer .wrap{
+    border-top:1px solid var(--rule);
+    padding-top:24px;
+  }
 
   @media (max-width:600px){
     header.hero{padding:44px 0 28px;}
     section{padding:32px 0;}
-    .metric-shift{flex-direction:column; align-items:flex-start;}
+    .metric-shift{
+      flex-direction:column;
+      align-items:flex-start;
+    }
+    .feature-chart{
+      padding:12px;
+    }
   }
 </style>
 </head>
+
 <body>
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow"><span class="dot"></span>FlyRank ML Internship — Capstone Research Paper</div>
+    <div class="eyebrow">
+      <span class="dot"></span>
+      FlyRank ML Internship — Capstone Research Paper
+    </div>
+
     <h1>Content Opportunity Scoring Using Machine Learning</h1>
-    <p class="subtitle">A data-informed framework for prioritizing content refresh review, built on historical search, traffic, freshness, and engagement signals.</p>
+
+    <p class="subtitle">
+      A data-informed framework for prioritizing content refresh review,
+      built on historical search, traffic, freshness, and engagement signals.
+    </p>
+
     <div class="meta-row">
       <span class="pill">Author: Mahboob Ali</span>
       <span class="pill">Lane: Refresh / Content Opportunity Scoring</span>
@@ -284,143 +356,374 @@
 
   <section id="abstract">
     <p class="sec-label">Abstract</p>
+
     <div class="abstract">
-      <p>Content teams often can't tell which of thousands of aging pages actually need attention, so this project asks whether historical search, traffic, freshness, and engagement signals can rank pages for refresh review. Using an anonymized, roughly 30,000-row dataset of FlyRank search-intelligence signals, a Random Forest Regressor was trained to reproduce a transparent rule-based refresh-opportunity baseline, then validated first on a random 80/20 split and again on a stricter split grouped by client. Under the honest, client-grouped validation, R² fell from 0.645 to 0.558 and MAE rose from 0.057 to 0.073 relative to the random split, with content age, recency of update, and search position emerging as the strongest signals. The result is directional evidence — not causal proof — that freshness and visibility signals can support editorial prioritization, and the model's output is a ranked, reason-coded queue rather than an automated verdict. It's built for content teams who want a repeatable, explainable starting point for deciding which pages to review first, not a claim about how Google ranks anything.</p>
+      <p>
+        Content teams often can't tell which of thousands of aging pages actually need attention, so this project asks whether historical search, traffic, freshness, and engagement signals can rank pages for refresh review. Using an anonymized, roughly 30,000-row dataset of FlyRank search-intelligence signals, a Random Forest Regressor was trained to reproduce a transparent rule-based refresh-opportunity baseline, then validated first on a random 80/20 split and again on a stricter split grouped by client. Under the honest, client-grouped validation, R² fell from 0.645 to 0.558 and MAE rose from 0.057 to 0.073 relative to the random split, with content age, recency of update, and search position emerging as the strongest signals. The result is directional evidence — not causal proof — that freshness and visibility signals can support editorial prioritization, and the model's output is a ranked, reason-coded queue rather than an automated verdict. It's built for content teams who want a repeatable, explainable starting point for deciding which pages to review first, not a claim about how Google ranks anything.
+      </p>
     </div>
   </section>
 
+
   <section id="intro">
     <p class="sec-label">1 · Introduction</p>
+
     <h2>The problem: too many pages, no shared way to triage them</h2>
-    <p class="lede">Picture a content team with a few thousand live pages and one afternoon a week to review candidates for refresh. Some pages are quietly losing impressions, some have gone stale, some just never had good visibility to begin with — and without a shared, explainable way to rank them, review time goes to whichever page someone happens to remember.</p>
-    <p>This project asks: <strong>how can historical search, traffic, freshness, and engagement signals be used to prioritize content pages for potential refresh review?</strong> It supports content teams in deciding which pages should receive editorial review first when refresh resources are limited.</p>
-    <p>The goal is explicitly <em>not</em> to determine which pages will rank higher on Google, and not to claim a causal effect of content updates. It's to build a repeatable, data-informed prioritization approach — the kind a team can rerun every month and trust for the same reasons each time.</p>
+
+    <p class="lede">
+      Picture a content team with a few thousand live pages and one afternoon a week to review candidates for refresh. Some pages are quietly losing impressions, some have gone stale, some just never had good visibility to begin with — and without a shared, explainable way to rank them, review time goes to whichever page someone happens to remember.
+    </p>
+
+    <p>
+      This project asks:
+      <strong>
+        how can historical search, traffic, freshness, and engagement signals be used to prioritize content pages for potential refresh review?
+      </strong>
+      It supports content teams in deciding which pages should receive editorial review first when refresh resources are limited.
+    </p>
+
+    <p>
+      The goal is explicitly <em>not</em> to determine which pages will rank higher on Google, and not to claim a causal effect of content updates. It's to build a repeatable, data-informed prioritization approach — the kind a team can rerun every month and trust for the same reasons each time.
+    </p>
   </section>
+
 
   <section id="data">
     <p class="sec-label">2 · Data</p>
+
     <h2>An anonymized, content-level signal set</h2>
-    <p>The analysis uses the FlyRank ML Internship dataset for the Refresh / Content Opportunity Scoring lane — an anonymized, content-level table of search, traffic, freshness, and engagement signals. No client names, domains, URLs, titles, or keywords appear anywhere in the workflow.</p>
+
+    <p>
+      The analysis uses the FlyRank ML Internship dataset for the Refresh / Content Opportunity Scoring lane — an anonymized, content-level table of search, traffic, freshness, and engagement signals. No client names, domains, URLs, titles, or keywords appear anywhere in the workflow.
+    </p>
+
     <h3>Signals used</h3>
+
     <ul>
       <li><code>content_age_days</code>, <code>days_since_last_update</code></li>
       <li><code>search_volume</code>, <code>impressions_90d</code>, <code>clicks_90d</code>, <code>sessions_90d</code></li>
       <li><code>ctr</code>, <code>avg_position</code>, <code>engagement_rate</code></li>
     </ul>
+
     <h3>Target</h3>
-    <p>The target is the project's own rule-based <code>baseline_score</code> from the Week 4 baseline stage — a weighted combination of content age, days since last update, and negative traffic trend. Using the baseline as the modeling target makes it possible to directly compare the learned model against the transparent rule it's meant to improve on.</p>
+
+    <p>
+      The target is the project's own rule-based <code>baseline_score</code> from the Week 4 baseline stage — a weighted combination of content age, days since last update, and negative traffic trend. Using the baseline as the modeling target makes it possible to directly compare the learned model against the transparent rule it's meant to improve on.
+    </p>
+
     <h3>Exclusions</h3>
-    <p>Identifier fields — <code>content_id</code> and <code>client_id</code> — were never used as predictive features; <code>client_id</code> appears only as a grouping key for validation. No credentials, private exports, or client-identifying details appear in this workflow.</p>
-    <div class="callout"><strong>Public-safety framing.</strong> This is decision-support research on an anonymized sample. It is not evidence about Google's ranking algorithm, and it does not claim that changing a page will cause a ranking improvement.</div>
+
+    <p>
+      Identifier fields — <code>content_id</code> and <code>client_id</code> — were never used as predictive features; <code>client_id</code> appears only as a grouping key for validation. No credentials, private exports, or client-identifying details appear in this workflow.
+    </p>
+
+    <div class="callout">
+      <strong>Public-safety framing.</strong>
+      This is decision-support research on an anonymized sample. It is not evidence about Google's ranking algorithm, and it does not claim that changing a page will cause a ranking improvement.
+    </div>
   </section>
+
 
   <section id="methodology">
     <p class="sec-label">3 · Methodology</p>
+
     <h2>A learned model, checked against a rule and against itself</h2>
+
     <h3>Baseline</h3>
-    <p>The Week 4 baseline is a transparent, hand-weighted score: 40% content age, 35% days since last update, 25% negative traffic trend. It's the reference every later result is measured against — anyone can read the rule and audit it in one sitting.</p>
+
+    <p>
+      The Week 4 baseline is a transparent, hand-weighted score: 40% content age, 35% days since last update, 25% negative traffic trend. It's the reference every later result is measured against — anyone can read the rule and audit it in one sitting.
+    </p>
+
     <h3>Model</h3>
-    <p>A <strong>Random Forest Regressor</strong> was chosen because it can capture nonlinear relationships and interactions across the nine signals above without requiring feature scaling — a reasonable fit for a mix of count-like, ratio, and duration features.</p>
+
+    <p>
+      A <strong>Random Forest Regressor</strong> was chosen because it can capture nonlinear relationships and interactions across the nine signals above without requiring feature scaling — a reasonable fit for a mix of count-like, ratio, and duration features.
+    </p>
+
     <h3>Validation design</h3>
-    <p>Two validation strategies were run on purpose, not just one:</p>
+
+    <p>
+      Two validation strategies were run on purpose, not just one:
+    </p>
+
     <ol>
-      <li><strong>Random 80/20 split</strong> — the standard first check, but one that lets rows from the same client sit in both train and test.</li>
-      <li><strong>Grouped split by <code>client_id</code></strong> — the honest check. No client's pages appear in both training and testing, which is a more realistic test of generalizing to a client the model has never seen.</li>
+      <li>
+        <strong>Random 80/20 split</strong> — the standard first check, but one that lets rows from the same client sit in both train and test.
+      </li>
+
+      <li>
+        <strong>Grouped split by <code>client_id</code></strong> — the honest check. No client's pages appear in both training and testing, which is a more realistic test of generalizing to a client the model has never seen.
+      </li>
     </ol>
+
     <h3>Leakage checks</h3>
-    <p><code>baseline_score</code> — the target itself — was excluded from the input features, and identifier fields were kept out of the predictive feature set entirely. The analysis does not assume access to future ranking outcomes or private production signals unavailable at scoring time.</p>
+
+    <p>
+      <code>baseline_score</code> — the target itself — was excluded from the input features, and identifier fields were kept out of the predictive feature set entirely. The analysis does not assume access to future ranking outcomes or private production signals unavailable at scoring time.
+    </p>
   </section>
+
 
   <section id="results">
     <p class="sec-label">4 · Results</p>
+
     <h2>The grouped split is the one to trust</h2>
-    <p>The random-split number looks better — but that's exactly why it's checked against the grouped split before being trusted.</p>
+
+    <p>
+      The random-split number looks better — but that's exactly why it's checked against the grouped split before being trusted.
+    </p>
 
     <table>
       <caption>Random Forest performance, both validation strategies</caption>
+
       <thead>
-        <tr><th>Validation strategy</th><th class="num">MAE</th><th class="num">RMSE</th><th class="num">R²</th></tr>
+        <tr>
+          <th>Validation strategy</th>
+          <th class="num">MAE</th>
+          <th class="num">RMSE</th>
+          <th class="num">R²</th>
+        </tr>
       </thead>
+
       <tbody>
-        <tr><td>Random 80/20 split</td><td class="num">0.0569</td><td class="num">0.0726</td><td class="num">0.6447</td></tr>
-        <tr class="grouped"><td>Grouped by client (honest)</td><td class="num">0.0734</td><td class="num">0.0888</td><td class="num">0.5579</td></tr>
+        <tr>
+          <td>Random 80/20 split</td>
+          <td class="num">0.0569</td>
+          <td class="num">0.0726</td>
+          <td class="num">0.6447</td>
+        </tr>
+
+        <tr class="grouped">
+          <td>Grouped by client (honest)</td>
+          <td class="num">0.0734</td>
+          <td class="num">0.0888</td>
+          <td class="num">0.5579</td>
+        </tr>
       </tbody>
     </table>
 
+
     <div class="metric-shift">
-      <div class="m">R² <b>0.645</b></div>
+
+      <div class="m">
+        R²
+        <b>0.645</b>
+      </div>
+
       <div class="arrow">→</div>
-      <div class="m">R² <b>0.558</b></div>
-      <div class="m" style="margin-left:auto;">random split → grouped-by-client split</div>
+
+      <div class="m">
+        R²
+        <b>0.558</b>
+      </div>
+
+      <div class="m" style="margin-left:auto;">
+        random split → grouped-by-client split
+      </div>
+
     </div>
-    <p>The drop from 0.645 to 0.558 shows the random-split estimate was somewhat optimistic about generalization — a client the model has already partly seen is easier to score than a genuinely new one. That gap is the paper's headline number, not the higher one.</p>
+
+
+    <p>
+      The drop from 0.645 to 0.558 shows the random-split estimate was somewhat optimistic about generalization — a client the model has already partly seen is easier to score than a genuinely new one. That gap is the paper's headline number, not the higher one.
+    </p>
+
 
     <h3>What the model leaned on</h3>
-    <p>Feature-importance analysis ranked <code>content_age_days</code> as the most influential signal, followed by <code>days_since_last_update</code>, <code>avg_position</code>, and <code>impressions_90d</code> — directional evidence that freshness and search-visibility signals mattered most to the model's predictions.</p>
-    <ul class="featlist">
-      <li><div class="flabel"><span>content_age_days</span><span>most influential</span></div><div class="track"><div class="fill" style="width:92%"></div></div></li>
-      <li><div class="flabel"><span>days_since_last_update</span><span>2nd</span></div><div class="track"><div class="fill" style="width:74%"></div></div></li>
-      <li><div class="flabel"><span>avg_position</span><span>3rd</span></div><div class="track"><div class="fill" style="width:58%"></div></div></li>
-      <li><div class="flabel"><span>impressions_90d</span><span>4th</span></div><div class="track"><div class="fill" style="width:44%"></div></div></li>
-    </ul>
-    <p>Feature importance: <code>content_age_days</code> was the most influential signal, followed by <code>days_since_last_update</code>, <code>avg_position</code>, and <code>impressions_90d</code>. These rankings are directional and describe the model's internal feature importance; they should not be interpreted as causal effects.</p>
+
+    <p>
+      The figure below shows the <strong>actual feature-importance values produced by the trained Random Forest model</strong>. The chart is generated directly from the model's <code>feature_importances_</code> values for the nine features used during modeling.
+    </p>
+
+
+    <div class="feature-chart">
+      <img
+        src="img/feature_importance.png"
+        alt="Random Forest feature importance showing the relative importance of the nine modeling features"
+      >
+
+      <p class="chart-caption">
+        Figure: Random Forest feature importance. Higher values indicate that the feature contributed more to the model's internal split-based importance measure.
+      </p>
+    </div>
+
+
+    <p>
+      In this analysis, the feature-importance chart provides a directional view of which signals the Random Forest relied on most when reproducing the rule-based refresh-opportunity score. The relative importance of the features can help explain the model's behavior and identify which signals deserve closer inspection in the content-review workflow.
+    </p>
+
+    <p>
+      These importance values describe the model's internal behavior only. They do <strong>not</strong> mean that a more important feature causes a higher refresh opportunity, improves rankings, increases clicks, or produces any particular business outcome. Feature importance should therefore be interpreted as directional evidence rather than causal evidence.
+    </p>
+
   </section>
+
 
   <section id="limitations">
     <p class="sec-label">5 · Limitations &amp; honest framing</p>
+
     <h2>What this work cannot claim</h2>
+
     <ol class="limits-list">
-      <li><span class="lnum">01</span><strong>The target is a rule-based score, not a business outcome.</strong> The model predicts the project's own baseline refresh-opportunity score, not future clicks, rankings, or conversions. Good predictive performance here doesn't demonstrate that acting on the recommendations improves search performance.</li>
-      <li><span class="lnum">02</span><strong>Validation is not causal evidence.</strong> The analysis finds statistical patterns in the available data. It does not establish that freshness, visibility, or engagement <em>cause</em> changes in Google rankings.</li>
-      <li><span class="lnum">03</span><strong>Generalization is weaker than it first looks.</strong> Grouped R² (0.558) trails random-split R² (0.645) — a reminder that validation design materially changes the estimated performance.</li>
-      <li><span class="lnum">04</span><strong>Missing business context.</strong> The dataset likely omits editorial priorities, business value, seasonal campaigns, content-quality judgment, and strategic importance — all things a human reviewer would weigh.</li>
-      <li><span class="lnum">05</span><strong>Human review is required.</strong> This is decision support. No content, SEO, redirect, or publishing decision should be made from the model's output without a human checking it first.</li>
+
+      <li>
+        <span class="lnum">01</span>
+        <strong>The target is a rule-based score, not a business outcome.</strong>
+        The model predicts the project's own baseline refresh-opportunity score, not future clicks, rankings, or conversions. Good predictive performance here doesn't demonstrate that acting on the recommendations improves search performance.
+      </li>
+
+      <li>
+        <span class="lnum">02</span>
+        <strong>Validation is not causal evidence.</strong>
+        The analysis finds statistical patterns in the available data. It does not establish that freshness, visibility, or engagement <em>cause</em> changes in Google rankings.
+      </li>
+
+      <li>
+        <span class="lnum">03</span>
+        <strong>Generalization is weaker than it first looks.</strong>
+        Grouped R² (0.558) trails random-split R² (0.645) — a reminder that validation design materially changes the estimated performance.
+      </li>
+
+      <li>
+        <span class="lnum">04</span>
+        <strong>Missing business context.</strong>
+        The dataset likely omits editorial priorities, business value, seasonal campaigns, content-quality judgment, and strategic importance — all things a human reviewer would weigh.
+      </li>
+
+      <li>
+        <span class="lnum">05</span>
+        <strong>Human review is required.</strong>
+        This is decision support. No content, SEO, redirect, or publishing decision should be made from the model's output without a human checking it first.
+      </li>
+
     </ol>
-    <div class="callout" style="margin-top:22px;"><strong>Honest claim.</strong> The results provide directional evidence that historical freshness, search, traffic, and engagement signals can support content-review prioritization. They should not be interpreted as evidence of Google's ranking algorithm, or as proof of causal refresh impact.</div>
+
+    <div class="callout" style="margin-top:22px;">
+      <strong>Honest claim.</strong>
+      The results provide directional evidence that historical freshness, search, traffic, and engagement signals can support content-review prioritization. They should not be interpreted as evidence of Google's ranking algorithm, or as proof of causal refresh impact.
+    </div>
   </section>
+
 
   <section id="recommendations">
     <p class="sec-label">6 · Ranked recommendations</p>
+
     <h2>What a content team does with this, Monday morning</h2>
-    <p>The model's output is a ranked content-action queue: every page gets a predicted refresh-opportunity score and a human-readable reason code, so a reviewer can see <em>why</em> a page is ranked where it is, not just that it is.</p>
+
+    <p>
+      The model's output is a ranked content-action queue: every page gets a predicted refresh-opportunity score and a human-readable reason code, so a reviewer can see <em>why</em> a page is ranked where it is, not just that it is.
+    </p>
+
     <table>
       <caption>Signal pattern → recommended first action</caption>
-      <thead><tr><th>Signal / archetype</th><th>Recommended action</th></tr></thead>
+
+      <thead>
+        <tr>
+          <th>Signal / archetype</th>
+          <th>Recommended action</th>
+        </tr>
+      </thead>
+
       <tbody>
-        <tr><td>Old content with declining traffic</td><td>Refresh content</td></tr>
-        <tr><td>Low CTR with a reasonable ranking</td><td>Review title &amp; meta description</td></tr>
-        <tr><td>Poor search position</td><td>Review SEO / search visibility</td></tr>
-        <tr><td>Low engagement</td><td>Review content quality</td></tr>
-        <tr><td>Stable-performing content</td><td>Monitor</td></tr>
+        <tr>
+          <td>Old content with declining traffic</td>
+          <td>Refresh content</td>
+        </tr>
+
+        <tr>
+          <td>Low CTR with a reasonable ranking</td>
+          <td>Review title &amp; meta description</td>
+        </tr>
+
+        <tr>
+          <td>Poor search position</td>
+          <td>Review SEO / search visibility</td>
+        </tr>
+
+        <tr>
+          <td>Low engagement</td>
+          <td>Review content quality</td>
+        </tr>
+
+        <tr>
+          <td>Stable-performing content</td>
+          <td>Monitor</td>
+        </tr>
       </tbody>
     </table>
-    <p>Because content age and recency of update carried the most weight in the model, freshness signals are a reasonable place to start review effort — but that's a directional read from the model, not evidence that updating content will improve rankings.</p>
-    <p>Every recommendation in the queue is meant to be checked against content accuracy, business importance, search intent, recent manual updates, seasonal effects, marketing campaigns, and current content quality before anyone acts on it. The model doesn't publish, delete, redirect, merge, or modify anything on its own.</p>
+
+    <p>
+      Because content age and recency of update carried the most weight in the model, freshness signals are a reasonable place to start review effort — but that's a directional read from the model, not evidence that updating content will improve rankings.
+    </p>
+
+    <p>
+      Every recommendation in the queue is meant to be checked against content accuracy, business importance, search intent, recent manual updates, seasonal effects, marketing campaigns, and current content quality before anyone acts on it. The model doesn't publish, delete, redirect, merge, or modify anything on its own.
+    </p>
   </section>
+
 
   <section id="reproducibility">
     <p class="sec-label">7 · Reproducibility</p>
+
     <h2>Rerun it yourself</h2>
+
     <ul>
-      <li>Full workflow: <a href="https://github.com/MahboobAli1/flyrank-ml-internship" target="_blank" rel="noopener">github.com/MahboobAli1/flyrank-ml-internship</a></li>
-      <li>Capstone notebook: <code>work/notebooks/capstone.ipynb</code> — opens directly in Colab from the repo badge</li>
-      <li>Data: the bundled, anonymized <code>data/raw/content_refresh_anonymized.csv</code> (~30k rows) shipped with the starter repo</li>
+      <li>
+        Full workflow:
+        <a href="https://github.com/MahboobAli1/flyrank-ml-internship" target="_blank" rel="noopener">
+          github.com/MahboobAli1/flyrank-ml-internship
+        </a>
+      </li>
+
+      <li>
+        Capstone notebook:
+        <code>work/notebooks/capstone.ipynb</code>
+        — opens directly in Colab from the repo badge
+      </li>
+
+      <li>
+        Data:
+        the bundled, anonymized
+        <code>data/raw/content_refresh_anonymized.csv</code>
+        (~30k rows) shipped with the starter repo
+      </li>
     </ul>
-    <p>To rerun: open the notebook in Colab, <em>Runtime → Run all</em>. The current notebook doesn't pin a <code>random_state</code> on the <code>RandomForestRegressor</code> — for exact, bit-for-bit reproducibility across runs, set one (e.g. <code>random_state=42</code>) and note it here.</p>
+
+    <p>
+      To rerun: open the notebook in Colab, <em>Runtime → Run all</em>.
+      The current notebook doesn't pin a <code>random_state</code> on the
+      <code>RandomForestRegressor</code> — for exact, bit-for-bit reproducibility across runs, set one (e.g. <code>random_state=42</code>) and note it here.
+    </p>
   </section>
+
 
   <section id="acknowledgments">
     <p class="sec-label">8 · Acknowledgments &amp; data credit</p>
+
     <h2>Data and program credit</h2>
-    <p>This research was completed as part of the <strong>FlyRank ML Internship</strong>, using FlyRank's anonymized search-intelligence dataset. Thanks to the FlyRank team for the dataset access and the internship's ML curriculum.</p>
-    <p>Dataset: <a href="https://huggingface.co/datasets/FlyRank/internship-warehouse" target="_blank" rel="noopener">FlyRank/internship-warehouse</a> on Hugging Face (full ~79M-row release, gated access).</p>
+
+    <p>
+      This research was completed as part of the <strong>FlyRank ML Internship</strong>, using FlyRank's anonymized search-intelligence dataset. Thanks to the FlyRank team for the dataset access and the internship's ML curriculum.
+    </p>
+
+    <p>
+      Dataset:
+      <a href="https://huggingface.co/datasets/FlyRank/internship-warehouse" target="_blank" rel="noopener">
+        FlyRank/internship-warehouse
+      </a>
+      on Hugging Face (full ~79M-row release, gated access).
+    </p>
   </section>
 
 </main>
 
+
 <footer>
   <div class="wrap">
-    <p>Mahboob Ali — FlyRank ML Internship, Refresh / Content Opportunity Scoring lane. Built on an anonymized dataset; no client-identifying information appears on this page.</p>
+    <p>
+      Mahboob Ali — FlyRank ML Internship, Refresh / Content Opportunity Scoring lane. Built on an anonymized dataset; no client-identifying information appears on this page.
+    </p>
   </div>
 </footer>
 
